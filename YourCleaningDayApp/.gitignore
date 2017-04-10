@@ -28,8 +28,11 @@ Obj/
 
 # Visual Studio 2015 cache/options directory
 .vs/
+/.vs/
+../.vs/
 /wwwroot/dist/
 /ClientApp/dist/
+/typings/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -184,6 +187,8 @@ ClientBin/
 orleans.codegen.cs
 
 /node_modules
+/wwwroot/js/@angular
+/wwwroot/js/rxjs
 
 /yarn.lock
 

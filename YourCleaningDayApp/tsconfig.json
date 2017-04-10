@@ -9,7 +9,14 @@
     "noEmitOnError": false,
     "removeComments": false,
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules"
+    ],
+    "types": [
+      "node"
+    ]
   },
   "exclude": [
     "node_modules",
