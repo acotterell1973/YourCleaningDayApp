@@ -7,7 +7,7 @@ System.register(["@angular/core", "@angular/platform-browser", "@angular/http", 
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, platform_browser_1, http_1, AppComponent, AppModule;
+    var core_1, platform_browser_1, http_1, app_comonent_1, AppModule;
     return {
         setters: [
             function (core_1_1) {
@@ -21,8 +21,8 @@ System.register(["@angular/core", "@angular/platform-browser", "@angular/http", 
             },
             function (_1) {
             },
-            function (AppComponent_1) {
-                AppComponent = AppComponent_1;
+            function (app_comonent_1_1) {
+                app_comonent_1 = app_comonent_1_1;
             }
         ],
         execute: function () {
@@ -34,7 +34,7 @@ System.register(["@angular/core", "@angular/platform-browser", "@angular/http", 
             AppModule = __decorate([
                 core_1.NgModule({
                     declarations: [
-                        AppComponent.AppComponent
+                        app_comonent_1.AppComponent
                     ],
                     imports: [
                         platform_browser_1.BrowserModule,
@@ -42,7 +42,7 @@ System.register(["@angular/core", "@angular/platform-browser", "@angular/http", 
                     ],
                     providers: [],
                     bootstrap: [
-                        AppComponent.AppComponent
+                        app_comonent_1.AppComponent
                     ]
                 })
             ], AppModule);

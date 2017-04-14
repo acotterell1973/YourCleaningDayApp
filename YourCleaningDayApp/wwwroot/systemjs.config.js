@@ -1,22 +1,32 @@
-﻿(function(global) {
+﻿(function (global) {
+
+    var paths = {
+        // paths serve as alias
+        'npm:': '/js/'
+    };
     //map tells the System loader where to look for things
     var map = {
-        'app': 'app', //out application files
-        '@angular': 'js/@angular', //angular2 packages
-        'rxjs': 'js/rxjs' //Rxjx package
+        app: 'app', //out application files
+        '@angular': 'npm:@angular', //angular2 packages
+        'rxjs': 'npm:rxjs' //Rxjx package
     };
 
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
-        'app': { main: 'main.js', defaultExtension: 'js' },
-        'rxjs': { defaultExtension: 'js' }
+        'app': {
+            main: './main.js',
+            defaultExtension: 'js'
+        },
+        'rxjs': {
+             defaultExtension: 'js'
+        }
     };
 
     //configure @angular packages
     var ngPackageNames = [
+        'core',
         'common',
         'compiler',
-        'core',
         'http',
         'platform-browser',
         'platform-browser-dynamic',
@@ -24,11 +34,11 @@
     ];
 
     function packIndex(pkgName) {
-        packages['@angular/' + pkgName] = { main: 'index.js', defaultExtension: 'js' };
+        packages['npm:@angular/' + pkgName] = { main: 'index.js', defaultExtension: 'js' };
     }
 
     function packUmd(pkgName) {
-        packages['@angular/' + pkgName] = { main: '/bundles/'+ pkgName +'.umd.js', defaultExtension: 'js' };
+        packages['npm:@angular/' + pkgName] = { main: '/bundles/'+ pkgName +'.umd.js', defaultExtension: 'js' };
     }
 
     var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
@@ -37,6 +47,7 @@
     ngPackageNames.forEach(setPackageConfig);
 
     var config = {
+        paths: paths,
         map: map,
         packages: packages
     }

@@ -3,12 +3,11 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
 import "rxjs/Rx";
-
-import AppComponent = require("./app.comonent");
+import { AppComponent } from "./app.comonent";
 
 @NgModule({
     declarations: [
-        AppComponent.AppComponent
+        AppComponent
     ],
     imports: [
         BrowserModule,
@@ -17,7 +16,7 @@ import AppComponent = require("./app.comonent");
     providers: [
     ],
     bootstrap: [
-        AppComponent.AppComponent
+        AppComponent
     ]
 })
 export class AppModule { }
