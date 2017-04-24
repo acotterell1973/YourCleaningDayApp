@@ -4,16 +4,21 @@ import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
 import "rxjs/Rx";
 import { AppComponent } from "./app.comonent";
+import { EmployeeListComponent } from "./employee-list.component";
+import { EmployeeService } from "./employee.service";
+
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent, 
+        EmployeeListComponent
     ],
     imports: [
         BrowserModule,
         HttpModule
     ],
     providers: [
+        EmployeeService
     ],
     bootstrap: [
         AppComponent

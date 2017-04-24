@@ -2,7 +2,8 @@
 
 @Component({
     selector: "yourcleaningday",
-    template: "<h1>Your Clean Day</h1><div>Work in progress</div>"
+    template: "<h1>{{title}}</h1>" +
+        "<employee-list></employee-list>"
 })
 
 export class AppComponent {

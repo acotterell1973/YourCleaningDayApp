@@ -1,4 +1,4 @@
-System.register(["@angular/core", "@angular/platform-browser", "@angular/http", "rxjs/Rx", "./app.comonent"], function (exports_1, context_1) {
+System.register(["@angular/core", "@angular/platform-browser", "@angular/http", "rxjs/Rx", "./app.comonent", "./employee-list.component", "./employee.service"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7,7 +7,7 @@ System.register(["@angular/core", "@angular/platform-browser", "@angular/http", 
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, platform_browser_1, http_1, app_comonent_1, AppModule;
+    var core_1, platform_browser_1, http_1, app_comonent_1, employee_list_component_1, employee_service_1, AppModule;
     return {
         setters: [
             function (core_1_1) {
@@ -23,6 +23,12 @@ System.register(["@angular/core", "@angular/platform-browser", "@angular/http", 
             },
             function (app_comonent_1_1) {
                 app_comonent_1 = app_comonent_1_1;
+            },
+            function (employee_list_component_1_1) {
+                employee_list_component_1 = employee_list_component_1_1;
+            },
+            function (employee_service_1_1) {
+                employee_service_1 = employee_service_1_1;
             }
         ],
         execute: function () {
@@ -34,13 +40,16 @@ System.register(["@angular/core", "@angular/platform-browser", "@angular/http", 
             AppModule = __decorate([
                 core_1.NgModule({
                     declarations: [
-                        app_comonent_1.AppComponent
+                        app_comonent_1.AppComponent,
+                        employee_list_component_1.EmployeeListComponent
                     ],
                     imports: [
                         platform_browser_1.BrowserModule,
                         http_1.HttpModule
                     ],
-                    providers: [],
+                    providers: [
+                        employee_service_1.EmployeeService
+                    ],
                     bootstrap: [
                         app_comonent_1.AppComponent
                     ]

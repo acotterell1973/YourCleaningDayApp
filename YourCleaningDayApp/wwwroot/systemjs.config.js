@@ -11,13 +11,13 @@
         'rxjs': 'npm:rxjs' //Rxjx package
     };
 
-    // packages tells the System loader how to load when no filename and/or no extension
+    // packages tells the System loader which filename and/or extensions to look for by default (when none are specified)
     var packages = {
-        'app': {
+        app: {
             main: './main.js',
             defaultExtension: 'js'
         },
-        'rxjs': {
+        rxjs: {
              defaultExtension: 'js'
         }
     };
