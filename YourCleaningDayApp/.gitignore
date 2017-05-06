@@ -26,6 +26,9 @@ Bin/
 obj/
 Obj/
 
+# EF Code First Migrations
+Data/Migrations
+
 # Visual Studio 2015 cache/options directory
 .vs/
 /.vs/
