@@ -25,7 +25,7 @@ namespace YourCleaningDayApp.TypeConverters
                 CustomerId = concreteValue.CustomerId,
                 FirstName = concreteValue.FirstName,
                 LastName = concreteValue.LastName,
-                PhoneNumber = concreteValue.PrimaryPhoneNumber.FormatWith("") ,
+                PhoneNumber = concreteValue.PrimaryPhoneNumber.FormatPhoneNumber() ,
                 EmailAddress = concreteValue.PrimaryEmailAddress,
                 Gender = concreteValue.Gender == "M" ? "Male" : "Female",
                 Address1 = concreteValue.Address.Address1,

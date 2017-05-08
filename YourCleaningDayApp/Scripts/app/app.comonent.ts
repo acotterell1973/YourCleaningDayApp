@@ -3,9 +3,9 @@
 @Component({
     selector: "yourcleaningday",
     template: "<h1>{{title}}</h1>" +
-        "<employee-list></employee-list>"
+        "<customer-list></customer-list>"
 })
 
 export class AppComponent {
-    
+    title="Your Cleaning Day Manager";
 }

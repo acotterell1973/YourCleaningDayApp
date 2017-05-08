@@ -17,6 +17,7 @@ System.register(["@angular/core"], function (exports_1, context_1) {
         execute: function () {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.title = "Your Cleaning Day Manager";
                 }
                 return AppComponent;
             }());
@@ -24,7 +25,7 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                 core_1.Component({
                     selector: "yourcleaningday",
                     template: "<h1>{{title}}</h1>" +
-                        "<employee-list></employee-list>"
+                        "<customer-list></customer-list>"
                 })
             ], AppComponent);
             exports_1("AppComponent", AppComponent);

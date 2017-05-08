@@ -44,6 +44,9 @@ namespace YourCleaningDayApp.Data.Customers
         [Required]
         [ForeignKey("AddressId")]
         public virtual Address Address { get; set; }
+
+        public bool Active { get; set; } = true;
+
         #endregion
 
     }

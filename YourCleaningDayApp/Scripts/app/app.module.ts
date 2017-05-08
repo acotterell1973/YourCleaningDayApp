@@ -6,11 +6,15 @@ import "rxjs/Rx";
 import { AppComponent } from "./app.comonent";
 import { EmployeeListComponent } from "./employee-list.component";
 import { EmployeeService } from "./employee.service";
+import { CustomerListComponent } from "./customer-list.component";
+import { CustomerService } from "./customer.service";
+
 
 
 @NgModule({
     declarations: [
         AppComponent, 
+        CustomerListComponent,
         EmployeeListComponent
     ],
     imports: [
@@ -18,6 +22,7 @@ import { EmployeeService } from "./employee.service";
         HttpModule
     ],
     providers: [
+        CustomerService,
         EmployeeService
     ],
     bootstrap: [
